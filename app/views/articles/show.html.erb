@@ -2,3 +2,7 @@
 
 <p><strong>Titulo:</strong><%=@article.title %></p>
 <p><strong>Descripcion:</strong><%=@article.description%></p>
+
+<p><%= link_to 'Editar', edit_article_path(@article)%></p>
+<p><%= link_to 'Borrar', article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Estas seguro que deseas eliminar el articulo?"}  %></p>
+<p><%= link_to 'Volver al listado de articulos.', articles_path %></p>
